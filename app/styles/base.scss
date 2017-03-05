@@ -1,0 +1,879 @@
+@charset "UTF-8";
+/*!根据 normalize.css v5.0.0 删减的1 */
+/**
+ * 只是单纯的用到pc上
+ * 兼容直到ie8+
+ *版本是根据pc-base来的。没更新
+ */
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+html,body{
+  height:100%;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible; }
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+  /* 2 */ }
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
+
+a:active,
+a:hover {
+  outline-width: 0; }
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted; }
+
+b,
+strong {
+  font-weight: inherit;
+  font-weight: bolder; }
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+img {
+  max-width: 100%;
+  border-style: none; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0; }
+
+button,
+input {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal; }
+
+textarea {
+  overflow: auto; }
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+canvas {
+  display: inline-block; }
+
+template {
+  display: none; }
+
+[hidden] {
+  display: none; }
+
+/*
+只针对map结构的构造器
+$css是作为css的参数用的
+*/
+/*
+只针对list结构的构造器
+$css是作为css的参数用的
+$pr作为简写用的
+*/
+.bsb{box-sizing: border-box}
+.z0 {
+  z-index: 0; }
+
+.z1 {
+  z-index: 1; }
+
+.z2 {
+  z-index: 2; }
+
+.z3 {
+  z-index: 3; }
+
+.z4 {
+  z-index: 4; }
+
+.z99 {
+  z-index: 99; }
+
+.poa {
+  position: absolute; }
+
+.por {
+  position: relative; }
+
+.pof {
+  position: fixed; }
+
+.pos {
+  position: static; }
+
+.tl0 {
+  top: 0;
+  left: 0; }
+
+.all0 {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.clip0 {
+  clip: rect(0 0 0 0); }
+
+.l {
+  float: left; }
+
+.r {
+  float: right; }
+
+.dn {
+  display: none; }
+
+.din {
+  display: inline-block; }
+
+.dli {
+  display: list-item; }
+
+.di {
+  display: inline; }
+
+.db {
+  display: block; }
+
+.dt, .clearfix:before, .clearfix:after {
+  content: '';
+  width:100%;
+  display: table; }
+
+.dtc {
+  display: table-cell; }
+
+.dtr {
+  display: table-row; }
+
+.clearfix:after {
+  clear: both; }
+
+.vs {
+  visibility: visible; }
+
+.hd {
+  visibility: hidden; }
+
+.oh {
+  overflow: hidden; }
+
+.os {
+  overflow: scroll; }
+
+.oa {
+  overflow: auto; }
+
+.ohx {
+  overflow-x: hidden; }
+
+.ohy {
+  overflow-x: hidden; }
+
+.w1s {
+  width: 100%; }
+
+.w2s {
+  width: 50%; }
+
+.w3s {
+  width: 33.33333%; }
+
+.w4s {
+  width: 25%; }
+
+.w5s {
+  width: 20%; }
+
+.w6s {
+  width: 16.66667%; }
+
+.w7s {
+  width: 14.28571%; }
+
+.w8s {
+  width: 12.5%; }
+
+.w9s {
+  width: 11.11111%; }
+
+.w10s {
+  width: 10%; }
+
+.w0 {
+  width: 0px; }
+
+.w50 {
+  width: 50px; }
+
+.w100 {
+  width: 100px; }
+
+.w150 {
+  width: 150px; }
+
+.w200 {
+  width: 200px; }
+
+.w300 {
+  width: 300px; }
+
+.w400 {
+  width: 400px; }
+
+.w600 {
+  width: 600px; }
+
+.w800 {
+  width: 800px; }
+
+.w1000 {
+  width: 1000px; }
+
+.w1200 {
+  width: 1200px; }
+
+.h0 {
+  height: 0px; }
+
+.h80 {
+  height: 80px; }
+
+.h100 {
+  height: 100px; }
+
+.h200 {
+  height: 200px; }
+
+.h300 {
+  height: 300px; }
+
+.h400 {
+  height: 400px; }
+
+.wh {
+  width: auto;
+  height: auto; }
+
+.p0 {
+  padding: 0px; }
+
+.p5 {
+  padding: 5px; }
+
+.p8 {
+  padding: 8px; }
+
+.p10 {
+  padding: 10px; }
+
+.p12 {
+  padding: 12px; }
+
+.p15 {
+  padding: 15px; }
+
+.p20 {
+  padding: 20px; }
+
+.p30 {
+  padding: 30px; }
+
+.pt0 {
+  padding-top: 0px; }
+
+.pt5 {
+  padding-top: 5px; }
+
+.pt8 {
+  padding-top: 8px; }
+
+.pt10 {
+  padding-top: 10px; }
+
+.pt12 {
+  padding-top: 12px; }
+
+.pt15 {
+  padding-top: 15px; }
+
+.pt20 {
+  padding-top: 20px; }
+
+.pt30 {
+  padding-top: 30px; }
+
+.pl0 {
+  padding-left: 0px; }
+
+.pl5 {
+  padding-left: 5px; }
+
+.pl8 {
+  padding-left: 8px; }
+
+.pl10 {
+  padding-left: 10px; }
+
+.pl12 {
+  padding-left: 12px; }
+
+.pl15 {
+  padding-left: 15px; }
+
+.pl20 {
+  padding-left: 20px; }
+
+.pl30 {
+  padding-left: 30px; }
+
+.m0 {
+  margin: 0px; }
+
+.m5 {
+  margin: 5px; }
+
+.m8 {
+  margin: 8px; }
+
+.m10 {
+  margin: 10px; }
+
+.m12 {
+  margin: 12px; }
+
+.m15 {
+  margin: 15px; }
+
+.m20 {
+  margin: 20px; }
+
+.m30 {
+  margin: 30px; }
+
+.mt0 {
+  margin-top: 0px; }
+
+.mt5 {
+  margin-top: 5px; }
+
+.mt8 {
+  margin-top: 8px; }
+
+.mt10 {
+  margin-top: 10px; }
+
+.mt12 {
+  margin-top: 12px; }
+
+.mt15 {
+  margin-top: 15px; }
+
+.mt20 {
+  margin-top: 20px; }
+
+.mt30 {
+  margin-top: 30px; }
+
+.ml0 {
+  margin-left: 0px; }
+
+.ml5 {
+  margin-left: 5px; }
+
+.ml8 {
+  margin-left: 8px; }
+
+.ml10 {
+  margin-left: 10px; }
+
+.ml12 {
+  margin-left: 12px; }
+
+.ml15 {
+  margin-left: 15px; }
+
+.ml20 {
+  margin-left: 20px; }
+
+.ml30 {
+  margin-left: 30px; }
+
+.mb0 {
+  margin-bottom: 0px; }
+
+.mb5 {
+  margin-bottom: 5px; }
+
+.mb8 {
+  margin-bottom: 8px; }
+
+.mb10 {
+  margin-bottom: 10px; }
+
+.mb12 {
+  margin-bottom: 12px; }
+
+.mb15 {
+  margin-bottom: 15px; }
+
+.mb20 {
+  margin-bottom: 20px; }
+
+.mb30 {
+  margin-bottom: 30px; }
+
+.mr0 {
+  margin-right: 0px; }
+
+.mr5 {
+  margin-right: 5px; }
+
+.mr8 {
+  margin-right: 8px; }
+
+.mr10 {
+  margin-right: 10px; }
+
+.mr12 {
+  margin-right: 12px; }
+
+.mr15 {
+  margin-right: 15px; }
+
+.mr20 {
+  margin-right: 20px; }
+
+.mr30 {
+  margin-right: 30px; }
+
+.ma {
+  margin-left: auto;
+  margin-right: auto; }
+
+.c0 {
+  color: white; }
+
+.bg0 {
+  background-color: white; }
+
+.bd0 {
+  border-color: white; }
+
+.c1 {
+  color: #e6e6e6; }
+
+.bg1 {
+  background-color: #e6e6e6; }
+
+.bd1 {
+  border-color: #e6e6e6; }
+
+.c2 {
+  color: #cccccc; }
+
+.bg2 {
+  background-color: #cccccc; }
+
+.bd2 {
+  border-color: #cccccc; }
+
+.c3 {
+  color: #b3b3b3; }
+
+.bg3 {
+  background-color: #b3b3b3; }
+
+.bd3 {
+  border-color: #b3b3b3; }
+
+.c4 {
+  color: #999999; }
+
+.bg4 {
+  background-color: #999999; }
+
+.bd4 {
+  border-color: #999999; }
+
+.c5 {
+  color: gray; }
+
+.bg5 {
+  background-color: gray; }
+
+.bd5 {
+  border-color: gray; }
+
+.c6 {
+  color: #666666; }
+
+.bg6 {
+  background-color: #666666; }
+
+.bd6 {
+  border-color: #666666; }
+
+.c7 {
+  color: #4d4d4d; }
+
+.bg7 {
+  background-color: #4d4d4d; }
+
+.bd7 {
+  border-color: #4d4d4d; }
+
+.c8 {
+  color: #333333; }
+
+.bg8 {
+  background-color: #333333; }
+
+.bd8 {
+  border-color: #333333; }
+
+.c9 {
+  color: #1a1a1a; }
+
+.bg9 {
+  background-color: #1a1a1a; }
+
+.bd9 {
+  border-color: #1a1a1a; }
+
+.c10 {
+  color: black; }
+
+.bg10 {
+  background-color: black; }
+
+.bd10 {
+  border-color: black; }
+
+.pink {
+  color: pink; }
+
+.bgpink {
+  background-color: pink; }
+
+.green {
+  color: green; }
+
+.bggreen {
+  background-color: green; }
+
+.red {
+  color: red; }
+
+.bgred {
+  background-color: red; }
+
+.blue {
+  color: blue; }
+
+.bgblue {
+  background-color: blue; }
+
+.bd {
+  border-width: 1px;
+  border-style: solid; }
+
+.outline {
+  outline: 1px solid; }
+
+.bdt {
+  border-top: 1px solid; }
+
+.bdb {
+  border-bottom: 1px solid; }
+
+.bdl {
+  border-left: 1px solid; }
+
+.bdr {
+  border-right: 1px solid; }
+
+.rds2 {
+  border-radius: 2px; }
+
+.rds4 {
+  border-radius: 4px; }
+
+.rds6 {
+  border-radius: 6px; }
+
+.rds8 {
+  border-radius: 8px; }
+
+.rds12 {
+  border-radius: 12px; }
+
+.rds40 {
+  border-radius: 40px; }
+
+.rds100 {
+  border-radius: 100px; }
+
+.f0 {
+  font-size: 0px; }
+
+.f12 {
+  font-size: 12px; }
+
+.f14 {
+  font-size: 14px; }
+
+.f15 {
+  font-size: 15px; }
+
+.f16 {
+  font-size: 16px; }
+
+.f18 {
+  font-size: 18px; }
+
+.f20 {
+  font-size: 20px; }
+
+.f24 {
+  font-size: 24px; }
+
+.f28 {
+  font-size: 28px; }
+
+.f32 {
+  font-size: 32px; }
+
+.f48 {
+  font-size: 48px; }
+
+.lh24 {
+  line-height: 24px; }
+
+.lh32 {
+  line-height: 32px; }
+
+.lh48 {
+  line-height: 48px; }
+
+.lh72 {
+  line-height: 72px; }
+
+.lh0s {
+  line-height: 0; }
+
+.lh1s {
+  line-height: 1; }
+
+.lh12s {
+  line-height: 1.2; }
+
+.lh15s {
+  line-height: 1.5; }
+
+.lh18s {
+  line-height: 1.8; }
+
+.lh2s {
+  line-height: 2; }
+
+.lh24s {
+  line-height: 2.4; }
+
+.lh3s {
+  line-height: 3; }
+
+.fi {
+  font-style: italic; }
+
+.fb {
+  font-weight: bold; }
+
+.fl {
+  font-weight: lighter; }
+
+.tl {
+  text-align: left; }
+
+.tr {
+  text-align: right; }
+
+.tc {
+  text-align: center; }
+
+.tj {
+  text-align: justify; }
+
+.ell {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.vs {
+  vertical-align: sub; }
+
+.vt {
+  vertical-align: top; }
+
+.vm {
+  vertical-align: middle; }
+
+.vb {
+  vertical-align: bottom; }
+
+.underline {
+  text-decoration: underline; }
+
+.through {
+  text-decoration: line-through; }
+
+.ltr {
+  direction: ltr; }
+
+.rtl {
+  direction: rtl; }
+
+.op0 {
+  opacity: 0; }
+
+.op2 {
+  opacity: 0.2; }
+
+.op4 {
+  opacity: 0.4; }
+
+.op6 {
+  opacity: 0.6; }
+
+.op8 {
+  opacity: 0.8; }
+
+.op10 {
+  opacity: 1; }
+
+.reset {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.tbf {
+  table-layout: fixed; }
+
+.col {
+  border-collapse: collapse; }
+
+.pointer {
+  cursor: pointer; }
+
+.wait {
+  cursor: wait; }
+
+.move {
+  cursor: move; }
+
+.not-allowed {
+  cursor: not-allowed; }
+
+.zoom-in {
+  cursor: zoom-in; }
+
+.zoom-out {
+  cursor: zoom-out; }
+.trans{transition: all 0.3s}
+.bnone{outline: none;border:none;background: none}
+
+[data-show]{
+  display: none;
+  position: absolute;
+}
+[data-hover]:hover [data-show]{
+  display: block;
+}
+/*# sourceMappingURL=base.css.map */
