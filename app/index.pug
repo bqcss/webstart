@@ -1,0 +1,26 @@
+extends pugs/_default
+include pugs/_mixin.pug
+block title
+  - page_name ='pugtest page'
+  -
+    items=[
+    {image:'//img10.360buyimg.com/n7/jfs/t2866/129/3769781697/131733/85595969/579ab722N5caa0ca4.jpg',title:'发射基地开发技术反馈上来的反抗精神的看法'},
+    {image:'//m.360buyimg.com/babel/jfs/t2839/185/1362301044/616400/ce084b4a/573c0ff2N2c4d4218.jpg!q50.jpg',title:'发士大夫十分十分士大夫'},
+    {image:'//img14.360buyimg.com/n7/jfs/t2677/309/4338436947/108128/45eaacb/57b2db07Nea625b23.jpg',title:'随风倒士大夫随风倒十分士大夫发生的地方是否是'},
+    {image:'//img10.360buyimg.com/n7/jfs/t2866/129/3769781697/131733/85595969/579ab722N5caa0ca4.jpg',title:'随风倒士大夫士大夫大师傅士大夫家里都是'},
+    {image:'//img14.360buyimg.com/n7/jfs/t2677/309/4338436947/108128/45eaacb/57b2db07Nea625b23.jpg',title:'是的方式及方式打开了发送大附件是'},
+    {image:'//m.360buyimg.com/babel/jfs/t2839/185/1362301044/616400/ce084b4a/573c0ff2N2c4d4218.jpg!q50.jpg',title:'司法解释多空两方手机费乐山大佛健康'},
+    {image:'//img14.360buyimg.com/n7/jfs/t2677/309/4338436947/108128/45eaacb/57b2db07Nea625b23.jpg',title:'士大夫十分流口水的立法技术看来'},
+    {image:'//img10.360buyimg.com/n7/jfs/t2866/129/3769781697/131733/85595969/579ab722N5caa0ca4.jpg',title:'是的方式可分螺丝扣搭街坊乐山大佛'},
+    {image:'//img14.360buyimg.com/n7/jfs/t2677/309/4338436947/108128/45eaacb/57b2db07Nea625b23.jpg',title:'ggggggggggggg'},
+    {image:'//m.360buyimg.com/babel/jfs/t2839/185/1362301044/616400/ce084b4a/573c0ff2N2c4d4218.jpg!q50.jpg',title:'eeeeeeeeeeeee'},
+    {image:'//img14.360buyimg.com/n7/jfs/t2677/309/4338436947/108128/45eaacb/57b2db07Nea625b23.jpg',title:'ggggggggggggg'},
+    {image:'//img10.360buyimg.com/n7/jfs/t2866/129/3769781697/131733/85595969/579ab722N5caa0ca4.jpg',title:'ddddddddddddd'},
+    {image:'//img14.360buyimg.com/n7/jfs/t2677/309/4338436947/108128/45eaacb/57b2db07Nea625b23.jpg',title:'ggggggggggggg'},
+    ]
+block content
+  div#d.w1200.ma
+    h1.bg6.lh15s='5X==1200px的列表商品列表'
+    +lists(items)
+append js
+  script(src='scripts/main.js')
