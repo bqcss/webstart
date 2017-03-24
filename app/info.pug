@@ -8,19 +8,39 @@ block content
     div
       .l 左边信息
       .r 右边的
-  #infobody.ma.commw.w1s.bbb.bgpink
+  #infobody.ma.commw.w1s.bbb
     #content.dtc.vt.w1s.bbb
       p 这个是文字说明
-      img.vb.db(src='https://mir-s3-cdn-cf.behance.net/project_modules/1400/3c9c3543384001.57ecfb7327f64.jpg')
-      img.vb.db(src='https://mir-s3-cdn-cf.behance.net/project_modules/1400/ae446c43384001.57ecfb73295ae.jpg')
-      img.vb.db(src='https://mir-s3-cdn-cf.behance.net/project_modules/1400/3c9c3543384001.57ecfb7327f64.jpg')
-      img.vb.db(src='https://mir-s3-cdn-cf.behance.net/project_modules/1400/ae446c43384001.57ecfb73295ae.jpg')
-    .w320.dtc.vt.p10.bg0
+      p(style='font-size:50px') 你见过这么好吃的榴莲？
+      img.vb.db.lazy(src='https://mir-s3-cdn-cf.behance.net/project_modules/1400/3c9c3543384001.57ecfb7327f64.jpg')
+      img.vb.db.lazy(src='https://mir-s3-cdn-cf.behance.net/project_modules/1400/ae446c43384001.57ecfb73295ae.jpg')
+      img.vb.db.lazy(src='https://mir-s3-cdn-cf.behance.net/project_modules/1400/3c9c3543384001.57ecfb7327f64.jpg')
+      img.vb.db.lazy(src='https://mir-s3-cdn-cf.behance.net/project_modules/1400/ae446c43384001.57ecfb73295ae.jpg')
+    .w320.dtc.vt.p10.bg0.bl
       #rightcon
         h2.f18 厉害了word 666莲，这么好吃，你咋不上天！！！
         p.c8.f14 黄金产区出品，确保每一颗果子都是天然成长，无污染，不催熟，放心享受每一口
+        div
+          div.f14.bdtb.lh2s
+            div
+              .dtc 规格：
+              .dtc.c6 50g
+            div
+              .dtc 产地：
+              .dtc.c6 澳大利亚
+            div
+              .dtc 储存：
+              .dtc.c6 冷藏
+            div
+              .dtc 运输：
+              .dtc.c6 全宇宙配送               
+          div.imgw50.m10
+            img.din.mr10(src='https://a5.behance.net/dfe04841cf04e7a4c8ffff9c8ddbd1f489af0f7a/img/project/tools/photoshop.svg?cb=264615658')
+            img.din.mr10(src='https://a5.behance.net/dfe04841cf04e7a4c8ffff9c8ddbd1f489af0f7a/img/project/tools/photoshop.svg?cb=264615658')
+            img.din.mr10(src='https://a5.behance.net/dfe04841cf04e7a4c8ffff9c8ddbd1f489af0f7a/img/project/tools/photoshop.svg?cb=264615658')
+ 
         .summary
-          div
+          div &nbsp;
            div#info_con.oh
              .sp-loading
                img(src='http://img.zcool.cn/community/0161f656b0663e6ac7256cb052d31a.gif')
@@ -28,26 +48,18 @@ block content
                -for(var i=1 ;i <5; i++)
                  a.db(href='http://demo.sc.chinaz.com//Files/DownLoad/webjs1/201510/jiaoben3760/images/'+i+'.jpg')
                    img(src='http://demo.sc.chinaz.com//Files/DownLoad/webjs1/201510/jiaoben3760/images/'+i+'_tb.jpg')
-          div
+          div.lh2s
             b.f28 ￥888.00
             del.f12.c5 ￥1000.00
-          div
-            div.f14.c6.bdtb.m10.lh2s
-              div
-                .dtc 规格：
-                .dtc 50g
-              div
-                .dtc 产地：
-                .dtc 澳大利亚
-              div
-                .dtc 储存：
-                .dtc 冷藏                
+             
           div
             img.din.mr10(src='https://a5.behance.net/dfe04841cf04e7a4c8ffff9c8ddbd1f489af0f7a/img/galleries/icons/ribbons/1x/network.png')
             img.din.mr10(src='https://a5.behance.net/dfe04841cf04e7a4c8ffff9c8ddbd1f489af0f7a/img/galleries/icons/ribbons/1x/network.png')
             img.din.mr10(src='https://a5.behance.net/dfe04841cf04e7a4c8ffff9c8ddbd1f489af0f7a/img/galleries/icons/ribbons/1x/network.png')
             img.din.mr10(src='https://a5.behance.net/dfe04841cf04e7a4c8ffff9c8ddbd1f489af0f7a/img/galleries/icons/ribbons/1x/network.png')
+          div               
           a.db.tc.bd.lh2s.rds6.btn-a.c0.mt10(href='javascript:void(0)') 点击购买
+          p &nbsp;
 
                
 
@@ -60,12 +72,14 @@ append js
   //- script(src='scripts/main.js')
   script(src='scripts/scrollfix.js') 
   script(src='http://demo.sc.chinaz.com//Files/DownLoad/webjs1/201510/jiaoben3760/js/smoothproducts.min.js') 
+  script(src='http://www.jq22.com/demo/tuupola-jquery_lazyload/jquery.lazyload.js?v=1.9.1') 
   script.
     $(function(){
         //- 使用scrollfix插件制作右边跟随滚动
         $('.sp-wrap').smoothproducts();
         $('.summary').scrollFix({endPos: '#footer'});
-        
+
+        $("img.lazy").lazyload({effect: "fadeIn"});
 
 
     });
