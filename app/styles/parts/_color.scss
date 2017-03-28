@@ -1,0 +1,11 @@
+// 网上基础色调-参考shazam
+
+$color:(b1:#0088ff,y1:#ffaa00,y2:#ff7700,r1:#ff0033,p1:#9911aa,p2:#cc2288,g1:#34a853,g2:#aadd22,d1:#242424,d2:#646464,d3:#949494,d4:#e4e4e4,d5:#f4f4f4);
+@each $i,$v in $color{
+  .c#{$i}{
+    color:$v;
+  }
+  .bg#{$i}{
+    background-color:$v;
+  }
+}

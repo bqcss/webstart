@@ -1,0 +1,76 @@
+// _header 头部样式
+.hdi{
+  padding:5px 0;
+  font-size: 0;
+  border-left:1px solid;
+  vertical-align: middle;
+  margin:10px;
+}
+#ad_con{
+  height: 80px;
+}
+
+#search{
+  width: 180px;
+  outline: none;
+  border: 1px solid rgba(0,0,0,.1);
+  padding:5px 10px;
+  top:-3px;
+  background: none;
+  &:focus{
+    border-color:rgba(0,0,0,.2);
+    background-color:#fff;
+    background-color:rgba(255,255,255,0.8);
+  }
+}
+#search_bar{
+  margin-left: -26px;
+  margin-right: 20px;
+  &:hover{
+    span{
+      color: #333;
+      font-weight: 800;
+    }
+  }
+}
+#logo-img{
+  margin-top: -20px;
+}
+#items-con{
+  margin-left: 160px;
+  li{
+    padding: 0 20px;
+  }
+}
+#adrass{
+  margin-left: 170px
+}
+#headbody{
+  height: 100px;
+}
+
+#cart{
+  padding:12px;
+  .cart{
+    font-size:30px;
+
+  }
+  #cart-num{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 16px;
+  }
+}
+#slid{
+  background-color:pink;
+  .flexslider{
+    height: 400px;
+  }
+  a{
+    img{
+      height: 400px;
+    }
+
+  }
+}

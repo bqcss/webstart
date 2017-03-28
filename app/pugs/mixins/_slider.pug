@@ -1,0 +1,7 @@
+mixin slider(Slide)
+  .flexslider.por
+    ul.slides.reset
+      each si in Slide
+        li
+          a(href=si.url).db
+            img(src=si.image)

@@ -6,9 +6,10 @@
  *版本是根据pc-base来的。没更新
  */
 html {
-  font-family: sans-serif;
-  line-height: 1.4286;
   -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  font:14px/1.4286 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
+  color: #333;
   -webkit-text-size-adjust: 100%; }
 
 body {
@@ -16,7 +17,7 @@ body {
 html,body{
   min-height:100%;
   width: 100%;
-  background-color: #f7f7f7;
+  background-color: #f4f4f4;
 }
 article,
 aside,
@@ -45,11 +46,13 @@ pre {
 
 a {
   background-color: transparent;
+  text-decoration: none;
+  color: inherit;
   -webkit-text-decoration-skip: objects; }
 
 a:active,
 a:hover {
-  outline-width: 0; }
+  outline-width: 0;text-decoration: none; }
 
 abbr[title] {
   border-bottom: none;
@@ -876,4 +879,10 @@ $pr作为简写用的
 [data-hover]:hover [data-show]{
   display: block;
 }
+.mtb10{
+  margin:10px auto;
+}
+// 引入字体颜色
+ @import 'parts/_color';
+ @import 'parts/_fonts';
 /*# sourceMappingURL=base.css.map */

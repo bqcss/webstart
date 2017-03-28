@@ -32,7 +32,7 @@ body{
   padding:20px 60px;
 }
 .commw{
-  max-width: 1980px;
+  max-width: 1780px;
   min-width: 1200px;
 }
 #info_con{
@@ -51,5 +51,17 @@ body{
 }
 .bl{
   border-left:1px solid #f2f2f2;
+}
+.layui-layer-move{
+  background-color:red;
+}
+.fixed_bottom{
+  position: fixed;
+  bottom:60px;
+  height: 50px;
+}
+
+img{
+  // background-color:pink;
 }
 @import 'smoothproducts.scss'

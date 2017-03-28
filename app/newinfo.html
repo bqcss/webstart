@@ -20,13 +20,8 @@
         <div class="r">右边的</div>
       </div>
     </div>
-    <div class="ma commw bbb oh" id="infobody">
-      <div class="dtc vt bbb w1s" id="content">
-        <p>这个是文字说明</p>
-        <p style="font-size:50px;">你见过这么好吃的榴莲?</p><img data-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/c41a7649661805.58bb1d4b3b016.jpg" height="400px"><img data-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/551fb549661805.58bb1292f2eb3.jpg" height="400px"><img data-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/f0a51749661805.58bb1292f20c9.jpg" height="400px"><img class="vb db lazy" data-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/3c9c3543384001.57ecfb7327f64.jpg" height="400px"><img class="vb db lazy" data-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/ae446c43384001.57ecfb73295ae.jpg" height="400px"><img class="vb db lazy" data-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/3c9c3543384001.57ecfb7327f64.jpg" height="400px"><img class="vb db lazy" data-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/ae446c43384001.57ecfb73295ae.jpg" height="400px">
-        <div class="mt10 lh2s c0" id="left_s" style="width:300px;"><a class="din rds6 w2s bbb bgblue tc">加收藏</a><a class="bggreen rds6 w2s bbb tc r">立即购买  </a></div>
-      </div>
-      <div class="w320 dtc vt p10 bg0 bl">
+    <div class="ma commw w1s bbb por" id="infobody">
+      <div class="w320 vt p10 bg0 bl poa" style="right:60px;">
         <div id="rightcon">
           <h2 class="f18">厉害了word 666莲，这么好吃，你咋不上天！！！</h2>
           <p class="c8 f14">黄金产区出品，确保每一颗果子都是天然成长，无污染，不催熟，放心享受每一口</p>
@@ -72,21 +67,29 @@
           </div>
         </div>
       </div>
+      <div class="vt bbb" id="content" style="margin-right:322px;">
+        <p>这个是文字说明</p>
+        <p style="font-size:50px;">你见过这么好吃的榴莲?</p><img data-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/c41a7649661805.58bb1d4b3b016.jpg" height="200px"><img data-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/551fb549661805.58bb1292f2eb3.jpg" height="200px"><img data-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/f0a51749661805.58bb1292f20c9.jpg" height="200px"><img class="vb db lazy" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/3c9c3543384001.57ecfb7327f64.jpg"><img class="vb db lazy" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/ae446c43384001.57ecfb73295ae.jpg"><img class="vb db lazy" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/3c9c3543384001.57ecfb7327f64.jpg"><img class="vb db lazy" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/ae446c43384001.57ecfb73295ae.jpg">
+        <div class="mt10 lh2s c0 bgpink pof rds6 lh2s" id="bbb" style="width:300px;"><a class="din w3s bbb tc">加收藏</a><a class="rds6 w2s bbb tc r">立即购买</a></div>
+        <p>&nbsp;  </p>
+      </div>
     </div>
     <div class="bg9 c0 commw ma" id="footer">
       <div>底部文字</div>
     </div>
     <!-- javascript-->
     <script src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/js/lib/jquery-1.10.2_d88366fd.js"></script>
+    <script src="scripts/main.js"></script>
     <script src="scripts/scrollfix.js"> </script>
     <script src="http://demo.sc.chinaz.com//Files/DownLoad/webjs1/201510/jiaoben3760/js/smoothproducts.min.js"> </script>
     <script src="scripts/lazyloadxt.js"> </script>
     <script src="scripts/layer.js"> </script>
     <script>
       $(function(){
-          //- 图片放大与轮播
+          //- 使用scrollfix插件制作右边跟随滚动
           $('.sp-wrap').smoothproducts();
-          //- 点击弹出层
+       
+          $(window).lazyLoadXT();
           $('.btn-a').click(function(){
             layer.msg('商品添加成功',{
             time:1000,
@@ -95,19 +98,25 @@
           })
           $('.imgw50 img').mouseover(function(){
             layer.tips($(this).attr('stitle'),$(this));
+            console.log($(this).attr('stitle'))
           })
       
-          //- 图片懒加载,要提供高度的，而此布局下图片宽高并不固定，所以后台提供宽高之后也要重新计算下
-          $(window).lazyLoadXT();
-      //- 使用scrollfix插件制作右边跟随滚动
-      //- 这个插件没什么问题，但是其要读取高度，而高度跟左边的图片懒加载有关
-       $('#left_s').scrollFix( {
+       $('.summary').scrollFix({
+            //- startTop: 200, //滑到这个位置顶部时开始浮动，默认为空
+            //- startBottom: null, //滑到这个位置末端开始浮动，默认为空
+            //- distanceTop: 0, //固定在顶部的高度
+            endPos: $('#footer'), //停靠在底部的位置，可以为jquery对象
+            //- bottom: -1, //底部位置
+            //- zIndex: 0, //z-index值
+            //- baseClassName: 'scrollfixed' //开始固定时添加的类
+       });
+      
+       $('#bbb').scrollFix( {
              startTop:'body',
              bottom: '0',
              endPos : '#footer',
              zIndex : 999
          });
-       $('.summary').scrollFix({endPos: '#footer'});
       });
     </script>
   </body>

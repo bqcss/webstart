@@ -1,0 +1,26 @@
+extends pugs/_default
+include pugs/_mixin.pug
+block title
+  - page_name ='pugtest page'
+block css
+  link(rel='styleSheet', href="styles/flexslider.css")
+  style.
+        .slides{}
+block content
+  #silde.reset.flexslider.w1s.
+            <ul class="slides w1s">
+              <li> <a href='11111'> <img style='background-image:url(http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg);' src="none" /> </a> </li>
+              <li> <a href='222222'> <img style='background-image:url(http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg);' src="none" /> </a> </li>
+            </ul>
+
+
+append js
+  script(src='scripts/main.js')
+    //- flexslider的使用，兼容性好，配置简单，就是因为是100%的，所以要修改样式，而且把图片显示改成背景显示，就可以了
+  script(src='scripts/flexslider.js')
+  script.
+    $(window).load(function() {
+      $('.flexslider').flexslider({
+        animation: "fade"
+      });
+    });
